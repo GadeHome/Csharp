@@ -1,0 +1,14 @@
+/home/timofei/Progects/Csharp/MyFirstApp/bin/Debug/net9.0/MyFirstApp
+/home/timofei/Progects/Csharp/MyFirstApp/bin/Debug/net9.0/MyFirstApp.deps.json
+/home/timofei/Progects/Csharp/MyFirstApp/bin/Debug/net9.0/MyFirstApp.runtimeconfig.json
+/home/timofei/Progects/Csharp/MyFirstApp/bin/Debug/net9.0/MyFirstApp.dll
+/home/timofei/Progects/Csharp/MyFirstApp/bin/Debug/net9.0/MyFirstApp.pdb
+/home/timofei/Progects/Csharp/MyFirstApp/obj/Debug/net9.0/MyFirstApp.GeneratedMSBuildEditorConfig.editorconfig
+/home/timofei/Progects/Csharp/MyFirstApp/obj/Debug/net9.0/MyFirstApp.AssemblyInfoInputs.cache
+/home/timofei/Progects/Csharp/MyFirstApp/obj/Debug/net9.0/MyFirstApp.AssemblyInfo.cs
+/home/timofei/Progects/Csharp/MyFirstApp/obj/Debug/net9.0/MyFirstApp.csproj.CoreCompileInputs.cache
+/home/timofei/Progects/Csharp/MyFirstApp/obj/Debug/net9.0/MyFirstApp.dll
+/home/timofei/Progects/Csharp/MyFirstApp/obj/Debug/net9.0/refint/MyFirstApp.dll
+/home/timofei/Progects/Csharp/MyFirstApp/obj/Debug/net9.0/MyFirstApp.pdb
+/home/timofei/Progects/Csharp/MyFirstApp/obj/Debug/net9.0/MyFirstApp.genruntimeconfig.cache
+/home/timofei/Progects/Csharp/MyFirstApp/obj/Debug/net9.0/ref/MyFirstApp.dll
