@@ -3,26 +3,21 @@ using System;
 
 class TextEditorApp
 {
-    private static TextView textView; // Поле для ввода текста
+    private static TextView textView;
 
     static void Main(string[] args)
     {
-        Application.Init(); // Инициализация GTK
+        Application.Init();
 
-        // Создание главного окна
         Window window = new Window("Текстовый Редактор");
         window.SetDefaultSize(600, 400);
         window.DeleteEvent += (o, args) => Application.Quit();
 
-        // Создание вертикального контейнера
         VBox vbox = new VBox(false, 5);
-
-        // Создание поля для ввода текста
         textView = new TextView();
-        textView.WrapMode = WrapMode.Word; // Перенос слов
+        textView.WrapMode = WrapMode.Word;
         vbox.PackStart(textView, true, true, 0);
 
-        // Создание панели инструментов
         HBox toolbar = new HBox(false, 5);
 
         Button insertButton = CreateButton("Вставить", InsertText);
@@ -47,17 +42,12 @@ class TextEditorApp
 
         vbox.PackStart(toolbar, false, false, 0);
 
-        // Добавление контейнера в окно
         window.Add(vbox);
-
-        // Показываем все элементы
         window.ShowAll();
 
-        // Запуск главного цикла приложения
         Application.Run();
     }
 
-    // Создание кнопки с обработчиком
     static Button CreateButton(string label, EventHandler handler)
     {
         Button button = new Button(label);
@@ -65,19 +55,16 @@ class TextEditorApp
         return button;
     }
 
-    // Получение текста из TextView
     static string GetText()
     {
         return textView.Buffer.Text;
     }
 
-    // Установка текста в TextView
     static void SetText(string text)
     {
         textView.Buffer.Text = text;
     }
 
-    // Вставка текста в указанную позицию
     static void InsertText(object sender, EventArgs e)
     {
         InputDialog dialog = new InputDialog("Вставка", "Введите позицию и текст:", new[] { "Позиция", "Текст" });
@@ -93,17 +80,16 @@ class TextEditorApp
             }
             catch (ArgumentOutOfRangeException)
             {
-                ShowError("Ошибка: некорректная позиция для вставки.");
+                ShowError("Ошибка: некорректная позиция для вставки");
             }
             catch (FormatException)
             {
-                ShowError("Ошибка: неверный формат числа.");
+                ShowError("Ошибка: неверный формат числа");
             }
         }
         dialog.Destroy();
     }
 
-    // Объединение элементов через разделитель
     static void JoinText(object sender, EventArgs e)
     {
         InputDialog dialog = new InputDialog("Объединение", "Введите элементы через пробел и разделитель:", new[] { "Элементы", "Разделитель" });
@@ -117,7 +103,6 @@ class TextEditorApp
         dialog.Destroy();
     }
 
-    // Поиск последнего вхождения символа
     static void LastIndexOfChar(object sender, EventArgs e)
     {
         InputDialog dialog = new InputDialog("Поиск Последнего", "Введите символ для поиска:", new[] { "Символ" });
@@ -128,17 +113,16 @@ class TextEditorApp
             int index = currentText.LastIndexOf(character);
             if (index != -1)
             {
-                ShowMessage($"Последнее вхождение символа '{character}' находится на позиции {index}.");
+                ShowMessage($"Последнее вхождение символа '{character}' находится на позиции {index}");
             }
             else
             {
-                ShowMessage($"Символ '{character}' не найден в тексте.");
+                ShowMessage($"Символ '{character}' не найден в тексте");
             }
         }
         dialog.Destroy();
     }
 
-    // Удаление части текста
     static void RemoveText(object sender, EventArgs e)
     {
         InputDialog dialog = new InputDialog("Удаление", "Введите начальную позицию и количество символов:", new[] { "Начало", "Количество" });
@@ -154,17 +138,16 @@ class TextEditorApp
             }
             catch (ArgumentOutOfRangeException)
             {
-                ShowError("Ошибка: некорректные параметры удаления.");
+                ShowError("Ошибка: некорректные параметры удаления");
             }
             catch (FormatException)
             {
-                ShowError("Ошибка: неверный формат числа.");
+                ShowError("Ошибка: неверный формат числа");
             }
         }
         dialog.Destroy();
     }
 
-    // Замена подстроки
     static void ReplaceText(object sender, EventArgs e)
     {
         InputDialog dialog = new InputDialog("Замена", "Введите старую и новую подстроки:", new[] { "Старая", "Новая" });
@@ -179,7 +162,6 @@ class TextEditorApp
         dialog.Destroy();
     }
 
-    // Разделение текста на части
     static void SplitText(object sender, EventArgs e)
     {
         InputDialog dialog = new InputDialog("Разделение", "Введите разделитель:", new[] { "Разделитель" });
@@ -194,7 +176,6 @@ class TextEditorApp
         dialog.Destroy();
     }
 
-    // Получение подстроки
     static void GetSubstring(object sender, EventArgs e)
     {
         InputDialog dialog = new InputDialog("Подстрока", "Введите начальную позицию и длину:", new[] { "Начало", "Длина" });
@@ -210,31 +191,28 @@ class TextEditorApp
             }
             catch (ArgumentOutOfRangeException)
             {
-                ShowError("Ошибка: некорректные параметры подстроки.");
+                ShowError("Ошибка: некорректные параметры подстроки");
             }
             catch (FormatException)
             {
-                ShowError("Ошибка: неверный формат числа.");
+                ShowError("Ошибка: неверный формат числа");
             }
         }
         dialog.Destroy();
     }
 
-    // Преобразование текста в нижний регистр
     static void ConvertToLower(object sender, EventArgs e)
     {
         string currentText = GetText();
         SetText(currentText.ToLower());
     }
 
-    // Удаление лишних пробелов
     static void TrimText(object sender, EventArgs e)
     {
         string currentText = GetText();
         SetText(currentText.Trim());
     }
 
-    // Отображение сообщения
     static void ShowMessage(string message)
     {
         MessageDialog dialog = new MessageDialog(null, DialogFlags.Modal, MessageType.Info, ButtonsType.Ok, message);
@@ -242,7 +220,6 @@ class TextEditorApp
         dialog.Destroy();
     }
 
-    // Отображение ошибки
     static void ShowError(string message)
     {
         MessageDialog dialog = new MessageDialog(null, DialogFlags.Modal, MessageType.Error, ButtonsType.Ok, message);
@@ -251,7 +228,6 @@ class TextEditorApp
     }
 }
 
-// Диалог для ввода данных
 class InputDialog : Dialog
 {
     public string[] Inputs { get; private set; }
@@ -285,7 +261,6 @@ class InputDialog : Dialog
         vbox.ShowAll();
         ContentArea.Add(vbox);
 
-        // Сохранение введенных данных
         Response += (o, args) =>
         {
             if (args.ResponseId == ResponseType.Ok)
