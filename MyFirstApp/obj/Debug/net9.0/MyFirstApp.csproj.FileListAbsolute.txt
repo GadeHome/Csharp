@@ -12,3 +12,4 @@
 /home/timofei/Progects/Csharp/MyFirstApp/obj/Debug/net9.0/MyFirstApp.pdb
 /home/timofei/Progects/Csharp/MyFirstApp/obj/Debug/net9.0/MyFirstApp.genruntimeconfig.cache
 /home/timofei/Progects/Csharp/MyFirstApp/obj/Debug/net9.0/ref/MyFirstApp.dll
+/home/timofei/Progects/Csharp/MyFirstApp/obj/Debug/net9.0/MyFirstApp.sourcelink.json

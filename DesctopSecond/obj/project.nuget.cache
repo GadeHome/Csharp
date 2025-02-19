@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "4CS6BYRwyRU=",
+  "dgSpecHash": "oXs+K63ATpc=",
   "success": true,
   "projectFilePath": "/home/timofei/Progects/Csharp/DesctopSecond/DesctopSecond.csproj",
   "expectedPackageFiles": [
@@ -11,7 +11,7 @@
     "/home/timofei/.nuget/packages/glibsharp/3.24.24.95/glibsharp.3.24.24.95.nupkg.sha512",
     "/home/timofei/.nuget/packages/gtksharp/3.24.24.95/gtksharp.3.24.24.95.nupkg.sha512",
     "/home/timofei/.nuget/packages/pangosharp/3.24.24.95/pangosharp.3.24.24.95.nupkg.sha512",
-    "/home/timofei/.nuget/packages/microsoft.aspnetcore.app.ref/9.0.1/microsoft.aspnetcore.app.ref.9.0.1.nupkg.sha512"
+    "/home/timofei/.nuget/packages/microsoft.aspnetcore.app.ref/9.0.2/microsoft.aspnetcore.app.ref.9.0.2.nupkg.sha512"
   ],
   "logs": []
 }

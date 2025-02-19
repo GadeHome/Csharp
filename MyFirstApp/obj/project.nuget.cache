@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "hQ+/IwgMJSE=",
+  "dgSpecHash": "oJW9A/VaM/Q=",
   "success": true,
   "projectFilePath": "/home/timofei/Progects/Csharp/MyFirstApp/MyFirstApp.csproj",
   "expectedPackageFiles": [
-    "/home/timofei/.nuget/packages/microsoft.aspnetcore.app.ref/9.0.1/microsoft.aspnetcore.app.ref.9.0.1.nupkg.sha512"
+    "/home/timofei/.nuget/packages/microsoft.aspnetcore.app.ref/9.0.2/microsoft.aspnetcore.app.ref.9.0.2.nupkg.sha512"
   ],
   "logs": []
 }
